@@ -1,3 +1,7 @@
+// This module contains several constants needed to 
+// - calculate the total federal tax
+// - display the breakdown of a sum of federal tax by bracket
+// And a function that performs the calculation
 export const TAX_BRACKETS =[
   {
     min:0,

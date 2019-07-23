@@ -4,6 +4,18 @@ import SubmitForm from "../SubmitForm";
 import { calculateTaxes } from "../../calculateTax";
 import './styles.css';
 
+/**
+ * This top-level component does the heavy lifting and by calculating
+ * the total federal tax amount for a provided income
+ * 
+ * It contains two sub-components representing each screen:
+ * 1. A form for submitting gross annual income
+ * 2. A results page with the federal tax amount, effective tax rate and 
+ * the breakdown of how the taxes are calculated by displaying how each
+ * tax bracket adds up
+ * 
+ * It also holds the main state of the app.
+ */
 class TaxCalculator extends Component {
 
   calculateFederalTax = income => {

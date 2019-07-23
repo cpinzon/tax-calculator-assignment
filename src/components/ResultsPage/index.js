@@ -4,6 +4,17 @@ import CurrencyFormat from 'react-currency-format';
 import ResultsBreakdown from '../ResultsBreakdown';
 import './styles.css';
 
+/**
+ * The ResultsPage presentational component displays a results page with the federal tax amount, 
+ * effective tax rate and tax bracket breakdown, based on the gross annual income
+ * submitted in the previous page's form
+ * 
+ * This component also relies on another presentational component, ResultsBreakdown, whose
+ * specific purpose is to display the breakdown of how the taxes are calculated by 
+ * displaying how each tax bracket adds up to the total bracket.
+ * The unit test pertaining to that sub-component ensures that each bracket's tax
+ * amount adds up to the total federal tax amount
+ */
 class ResultsPage extends Component {
   static propTypes = {
     income: PropTypes.number.isRequired,
@@ -12,7 +23,6 @@ class ResultsPage extends Component {
   };
 
   render() {
-    debugger;
     const { income, taxAmount, bracket } = this.props;
     const effectiveTaxRate = (taxAmount / income)*100;
     return (
