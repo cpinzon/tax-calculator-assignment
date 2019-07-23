@@ -17,6 +17,10 @@ As directed, the app was built with the following constraints:
 
 ## Instructions
 
+### `npm install`
+
+Installs all node modules needed to run the app.
+
 ### `npm start`
 
 Runs the app in the development mode.<br>
