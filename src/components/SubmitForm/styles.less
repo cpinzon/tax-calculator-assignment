@@ -1,0 +1,113 @@
+@import "../../styles/variables";
+
+.submit-income-form {
+  padding: 0px 0px 60px 0px;
+
+  h2.title {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 400;
+    color: @black;
+  }
+
+  .submit-form {
+    padding: 20px 5px 0px 5px;
+
+    input {
+      display: block;
+      width: 100%;
+      padding: 7px 12px;
+      font-size: 18px;
+      line-height: 1.5;
+      color: @grey;
+      background-color: @white;
+      background-clip: padding-box;
+      border: 1px solid @grey-light;
+      border-radius: 4px;
+    }
+
+
+    .income-label {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .income-input.error {
+      border: 2px solid red;
+    }
+
+    .form-error-text {
+      color: red;
+      font-size: 14px;
+      padding-top: 5px;
+      font-weight: 600;
+    }
+  }
+
+  .submit-wrapper {
+    padding-top: 20px;
+
+    .btn {
+      width: 100%;
+      margin: 0 auto;
+      font-weight: 600;
+      display: inline-block;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      -webkit-user-select: none;
+      user-select: none;
+      padding: 5px 40px;
+      font-size: 18px;
+      line-height: 36px;
+      border-radius: 6px;
+      color: @white;
+      background-color: @blue;
+      border: 2px solid @blue;
+
+      &.disabled {
+        color: @blue-light;
+        border-color: @blue-light;
+        background-color: @grey-light;
+
+        &:hover {
+          color: @blue-light;
+          border-color: @blue-light;
+          background-color: @grey-light;
+        }
+      }
+
+      &:hover {
+        color: @white;
+        background-color: @blue-dark;
+        border-color: @blue-dark;
+      }
+    }
+  }
+
+  @media (min-width: @screen-md-min) {
+    h2.title {
+      text-align: center;
+    }
+
+    .submit-form {
+      max-width: 760px;
+    }
+  }
+
+  @media (min-width: @screen-lg-min) {
+    .submit-form {
+      max-width: 500px;
+      margin: 0 auto;
+
+      .income-input {
+        width: 100%;
+      }
+
+      .submit-wrapper {
+        width: 260px;
+        margin: 0 auto;
+      }
+    }
+  }
+}

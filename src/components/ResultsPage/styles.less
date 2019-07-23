@@ -1,0 +1,44 @@
+@import "../../styles/variables";
+
+.results-page {
+  h2.title {
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: 500;
+    color: @black;
+  }
+
+  p {
+    color: @blue;
+    font-size: 14px;
+  }
+
+  .tax-results {
+    padding-top: 20px;
+    padding-left: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+
+    .label, .amount {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .amount {
+      font-weight: 800;
+      color: @blue-dark;
+    }
+  }
+
+  @media (min-width: @screen-md-min) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+
+    .tax-results-section, .taxes-breakdown {
+      border: 1px solid @grey-light;
+      padding: 20px 20px 30px;
+    }
+  }
+}

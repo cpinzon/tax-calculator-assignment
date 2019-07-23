@@ -1,0 +1,50 @@
+{
+  "name": "tax-calculator-carol",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Points tax-calculator developer assignment",
+  "author": "Carolina Pinzon",
+  "dependencies": {
+    "enzyme-adapter-react-16": "^1.14.0",
+    "jest-enzyme": "^7.0.2",
+    "react": "^16.8.6",
+    "react-currency-format": "^1.0.0",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1",
+    "react-test-renderer": "^16.8.6"
+  },
+  "scripts": {
+    "start": "npm run build-css && run-p -ncr watch-css start-js",
+    "start-js": "react-scripts start",
+    "build": "npm run build-css && react-scripts build",
+    "build-js": "react-scripts build",
+    "build-css": "node-less-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-less-chokidar src/ -o src/ --watch --recursive",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "mocha-test": "mocha"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "homepage": "https://github.com/Points/lcr-developer-assignments/tax-calculator#README.md",
+  "devDependencies": {
+    "classnames": "^2.2.6",
+    "enzyme": "^3.10.0",
+    "node-less-chokidar": "^0.4.1",
+    "npm-run-all": "^4.1.5",
+    "prop-types": "^15.7.2"
+  }
+}
